@@ -42,7 +42,7 @@ public class PracticalTest01Var08SecondaryActivity extends AppCompatActivity {
                     int var6 = Integer.parseInt(leftB.getText().toString());
                     int var7 = Integer.parseInt(rightT.getText().toString());
                     int var8 = Integer.parseInt(rightB.getText().toString());
-                    int myprod = var5 + var6 + var7 + var8;
+                    int myprod = var5 * var6 * var7 * var8;
                     Toast.makeText(getApplicationContext(), "result" + myprod , Toast.LENGTH_LONG).show();
                     break;
             }
