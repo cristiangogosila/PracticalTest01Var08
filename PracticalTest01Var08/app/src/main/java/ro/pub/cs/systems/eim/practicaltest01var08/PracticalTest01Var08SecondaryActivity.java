@@ -19,7 +19,7 @@ public class PracticalTest01Var08SecondaryActivity extends AppCompatActivity {
     Button sum = null;
     Button prod = null;
 
-    private ButtonClickListener buttonClickListenter = new ButtonClickListener();
+    private ButtonClickListener buttonClickListener = new ButtonClickListener();
 
     private class ButtonClickListener implements View.OnClickListener
     {
@@ -34,7 +34,7 @@ public class PracticalTest01Var08SecondaryActivity extends AppCompatActivity {
                     int var3 = Integer.parseInt(rightT.getText().toString());
                     int var4 = Integer.parseInt(rightB.getText().toString());
                     int mysum = var1 + var2 + var3 + var4;
-                    Toast.makeText(getApplicationContext(),"result" + mysum , Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "result" + mysum , Toast.LENGTH_LONG).show();
                     break;
 
                 case R.id.prod:
@@ -43,7 +43,7 @@ public class PracticalTest01Var08SecondaryActivity extends AppCompatActivity {
                     int var7 = Integer.parseInt(rightT.getText().toString());
                     int var8 = Integer.parseInt(rightB.getText().toString());
                     int myprod = var5 + var6 + var7 + var8;
-                    Toast.makeText(getApplicationContext(),"result" + myprod , Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "result" + myprod , Toast.LENGTH_LONG).show();
                     break;
             }
         }
@@ -62,6 +62,9 @@ public class PracticalTest01Var08SecondaryActivity extends AppCompatActivity {
 
         sum = (Button)findViewById(R.id.sum);
         prod = (Button)findViewById(R.id.prod);
+
+        sum.setOnClickListener(buttonClickListener);
+        prod.setOnClickListener(buttonClickListener);
 
         Intent intentFromParent = getIntent();
         Bundle data = intentFromParent.getExtras();
